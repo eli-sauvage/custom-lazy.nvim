@@ -34,4 +34,16 @@ return {
       },
     },
   },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        typescript = { { "prettierd", "prettier" } },
+        html = { { "prettierd", "prettier" } },
+        scss = { { "prettierd", "prettier" } },
+        css = { { "prettierd", "prettier" } },
+        json = { { "prettierd", "prettier" } },
+      },
+    },
+  },
 }
