@@ -1,6 +1,6 @@
 #deps
 sudo apt update
-sudo apt install -y git curl libfuse-dev fuse gcc g++ make unzip trash-cli zellij ripgrep
+sudo apt install -y git curl libfuse-dev fuse gcc g++ make unzip trash-cli ripgrep
 #nvim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
