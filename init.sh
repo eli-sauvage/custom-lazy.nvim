@@ -1,6 +1,6 @@
 #deps
 sudo apt update
-sudo apt install -y git curl libfuse-dev fuse gcc g++ make unzip trash-cli
+sudo apt install -y git curl libfuse-dev fuse gcc g++ make unzip trash-cli zellij ripgrep
 #nvim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
@@ -12,6 +12,11 @@ chmod +x rust.sh
 ./rust.sh -y
 source "$HOME/.cargo/env"
 # zellij
-cargo install --locked zellij ripgrep
+wget https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
+tar -xvf zellij*.tar.gz
+chmod +x zellij
+sudo mv zellij /usr/local/bin/zellij
+mkdir ~/.config/zellij
+echo pane_frames false > ~/.config/zellij/config.kdl
 # astronvim
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
