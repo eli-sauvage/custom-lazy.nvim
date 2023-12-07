@@ -1,6 +1,6 @@
 #deps
 sudo apt update
-sudo apt install -y git curl libfuse-dev fuse gcc g++ make ripgrep unzip trash-cli
+sudo apt install -y git curl libfuse-dev fuse gcc g++ make unzip trash-cli
 #nvim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
@@ -12,6 +12,6 @@ chmod +x rust.sh
 ./rust.sh -y
 source "$HOME/.cargo/env"
 # zellij
-bash <(curl -L zellij.dev/launch)
+cargo install --locked zellij ripgrep
 # astronvim
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
