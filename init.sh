@@ -10,5 +10,8 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rust.sh
 chmod +x rust.sh
 ./rust.sh -y
+source "$HOME/.cargo/env"
+# zellij
+bash <(curl -L zellij.dev/launch)
 # astronvim
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
