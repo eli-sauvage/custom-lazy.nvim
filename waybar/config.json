@@ -1,0 +1,76 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 0,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "custom/cpu",
+        "memory",
+        "disk",
+        "tray",
+        "pulseaudio",
+        "battery",
+        "clock"
+    ],
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/cpu": {
+        "exec": "echo \"cpu: $(cat /proc/loadavg | cut -d' ' -f1,2,3)\"",
+        "interval": 1
+    },
+    "disk": {
+        "format": "free disk: {free}"
+    },
+    "memory": {
+        "format": "mem: {percentage}%",
+        "interval": 1
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}{format_source}",
+        "format-bluetooth": "{volume}% {icon}{format_source}",
+        "format-bluetooth-muted": " {icon}{format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    }
+}
